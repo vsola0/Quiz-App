@@ -99,3 +99,10 @@ const loadQuiz = () => {
     d_text.innerText = currentQuizData.d;
 }
 loadQuiz();
+submitButton.addEventListener("click", () => {
+    const answer = getSelected();
+    if(answer) {
+        if(answer === quizData[currentQuiz].correct) score++;
+        currentQuiz++;
+    }
+})
